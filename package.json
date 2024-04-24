@@ -1,9 +1,9 @@
 {
   "name": "@lsanchezn/wdio-slack-service",
-  "version": "2.0.9",
+  "version": "2.0.10",
   "description": "WebdriverIO service for Slack Integration",
-  "author": "Carmen Mitru <carmen.mitru@gmail.com>",
-  "homepage": "https://github.com/carmenmitru/wdio-slack-service",
+  "author": "Carmen Mitru",
+  "homepage": "https://github.com/LuisDiegoNavas/wdio-slack-service",
   "license": "MIT",
   "main": "src/index.js",
   "bin": "src/index.js",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/carmenmitru/wdio-slack-service.git"
+    "url": "git://github.com/LuisDiegoNavas/wdio-slack-service.git"
   },
   "keywords": [
     "webdriverio",
@@ -29,7 +29,7 @@
     "wdio-service"
   ],
   "bugs": {
-    "url": "https://github.com/carmenmitru/wdio-slack-service/issues"
+    "url": "https://github.com/LuisDiegoNavas/wdio-slack-service/issues"
   },
   "dependencies": {
     "@slack/webhook": "^6.0.0",
@@ -38,9 +38,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "contributors": [
-    "Carmen Mitru <carmen.mitru@gmail.com>",
-    "Vinod Reddy <vinodkumarv8197@gmail.com>"
-  ]
+  }
 }
