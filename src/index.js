@@ -73,7 +73,7 @@ class SlackService {
                 } else {
                     errorMessage = error.toString();
                 }
-                let testError = errorMessage.replace(/[\u001b\u009b][-[+()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/g, "");
+                let testError = errorMessage;
                 ++this.failedSteps;
                 ++this.steps;
                 const attach = failedAttachment({ title: this.testTitle, _currentRetry: retries.attempts }, testError, { duration });
@@ -146,33 +146,16 @@ class SlackService {
             this.attachment[0].color = `#ffc107`;
             this.attachment.push({author_name: `Total tests: ${this.tests} | Total passed: ${this.passedTests} | Total failed: ${this.failedTests}`, color: `#4366c7` });
         }
-        //Will be handled in next iteration
-        /**
-        let payload = {};
-        if(this.options.buildURL) {
-            const block = [{
-                type: `section`,
-                text: {
-                    type: `mrkdwn`,
-                    text: `* <${this.options.buildURL}|Test>*`
-                  }
-                }];
-                payload.attachments = this.attachment;
-                payload.blocks = block;
 
-        } else {
-            payload.attachments = this.attachment;
-        }
-        **/
 
-        if ((this.failedTests > 0 || this.failedScenarios > 0) && this.options.notifyOnlyOnFailure === true) {
-            await this.webhook.send({ attachments : this.attachment });
-            return;
-        }
+        //if ((this.failedTests > 0 || this.failedScenarios > 0) && this.options.notifyOnlyOnFailure === true) {
+        //    await this.webhook.send({ attachments : this.attachment });
+        //    return;
+        //}
 
-        if(!this.options.notifyOnlyOnFailure === true) {
-            await this.webhook.send({ attachments : this.attachment });
-        }
+        //if(!this.options.notifyOnlyOnFailure === true) {
+        //    await this.webhook.send({ attachments : this.attachment });
+        //}
       }
 
     }
