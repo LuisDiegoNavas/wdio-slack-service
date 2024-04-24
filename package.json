@@ -1,5 +1,5 @@
 {
-  "name": "wdio-slack-service",
+  "name": "@lsanchezn/wdio-slack-service",
   "version": "2.0.9",
   "description": "WebdriverIO service for Slack Integration",
   "author": "Carmen Mitru <carmen.mitru@gmail.com>",
